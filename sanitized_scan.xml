@@ -1,0 +1,60 @@
+<nmaprun scanner="nmap" args="nmap -sn -T4 -oX scan_results.xml 192.168.1.0/24" start="1756998331" startstr="Thu Sep  4 17:05:31 2025" version="7.94SVN" xmloutputversion="1.05">
+<verbose level="0" />
+<debugging level="0" />
+<host><status state="up" reason="syn-ack" reason_ttl="0" />
+<address addr="10.0.0.1" addrtype="ipv4" />
+<hostnames>
+</hostnames>
+<times srtt="43911" rttvar="43911" to="219555" />
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0" />
+<address addr="10.0.0.2" addrtype="ipv4" />
+<hostnames>
+</hostnames>
+<times srtt="117900" rttvar="117900" to="589500" />
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0" />
+<address addr="10.0.0.3" addrtype="ipv4" />
+<hostnames>
+</hostnames>
+<times srtt="18456" rttvar="18456" to="100000" />
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0" />
+<address addr="10.0.0.4" addrtype="ipv4" />
+<hostnames>
+</hostnames>
+<times srtt="69240" rttvar="69240" to="346200" />
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0" />
+<address addr="10.0.0.5" addrtype="ipv4" />
+<hostnames>
+</hostnames>
+<times srtt="136136" rttvar="136136" to="680680" />
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0" />
+<address addr="10.0.0.6" addrtype="ipv4" />
+<hostnames>
+</hostnames>
+<times srtt="39843" rttvar="34976" to="179747" />
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0" />
+<address addr="10.0.0.7" addrtype="ipv4" />
+<hostnames>
+</hostnames>
+<times srtt="20983" rttvar="20983" to="104915" />
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0" />
+<address addr="10.0.0.8" addrtype="ipv4" />
+<hostnames>
+</hostnames>
+<times srtt="1172" rttvar="5000" to="100000" />
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0" />
+<address addr="10.0.0.9" addrtype="ipv4" />
+<hostnames>
+</hostnames>
+<times srtt="6407" rttvar="6407" to="100000" />
+</host>
+<runstats><finished time="1756998335" timestr="Thu Sep  4 17:05:35 2025" summary="Nmap done at Thu Sep  4 17:05:35 2025; 256 IP addresses (9 hosts up) scanned in 4.74 seconds" elapsed="4.74" exit="success" /><hosts up="9" down="247" total="256" />
+</runstats>
+</nmaprun>
