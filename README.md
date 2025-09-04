@@ -1,22 +1,30 @@
-# Local-Network-Mapping-Documentation
+# Local Network Mapping & Documentation (Sanitized)
 
+## Objective
+Demonstrate local network discovery and topology generation using `nmap` and Graphviz. All outputs are sanitized for privacy—no real IPs, MACs, hostnames, or SSIDs.
 
-**Objective:** Safe local network discovery and topology generation using `nmap` → Graphviz.
+## Tools Used
+- `nmap`: For network scanning.
+- Graphviz: For visualizing topology.
+- Python: For parsing and sanitization.
 
-**Safety notice:** All published outputs are sanitized. Raw scans are never committed.
+## Setup
+1. Install `nmap` and Graphviz.
+2. (Optional) `pip install python-nmap`.
 
-## What I publish
-- `demo/topology.svg` — anonymized topology
-- `nmap-sanitized.xml` — anonymized nmap output
-- `scripts/` — commands and parsing/anonymization scripts
-- `demo/demo-terminal.gif` — sanitized run
+## Steps to Run
+1. Scan: `nmap -sn -T4 -oX scan_results.xml <your-subnet>`.
+2. Sanitize: Run `python sanitize.py`.
+3. Generate Topology: Run `python generate_topology.py`.
+4. Render: `dot -Tpng network_topology.dot -o network_map.png`.
 
-## Quick run (local-only)
-1. `bash scripts/scan.sh`  # only run on your own subnet
-2. `python3 scripts/anonymize_nmap.py scan.xml nmap-sanitized.xml`
-3. `python3 scripts/generate_graph.py nmap-sanitized.xml > demo/topology.dot`
-4. `dot -Tsvg demo/topology.dot -o demo/topology.svg`
+## Sample Output
+![Network Topology](network_map.png)
 
-## Notes
-- Do **not** scan networks you do not own or have permission to scan.
-- Keep mapping keys private — do not commit them.
+Example Sanitized XML Snippet:
+```xml
+<host>
+  <address addr="10.0.0.1" addrtype="ipv4"/>
+  <address addr="00:00:00:00:00:01" addrtype="mac" vendor="FakeVendor-1"/>
+  <hostnames><hostname name="Gateway-Device"/></hostnames>
+</host>
